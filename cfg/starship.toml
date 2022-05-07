@@ -1,0 +1,49 @@
+add_newline = false
+
+format = """
+[┌──](bold blue)[ 󰮯  ](yellow)[───](bold blue)[ 󱙝  ](red)[───](bold blue)[ 󰊠  ](purple)[───](bold blue)[ 󱙝  ](blue)[───](bold blue)[ 󰊠  ](green)$fill[󰧵 ](dimmed white)[󰧵 ](dimmed white)[󰧵 ](dimmed white)[| ](white)$directory[|](white)
+[└─](bold blue)$character 
+"""
+
+#format = """
+#[󰉋 ](cyan)$directory[󰮯 ](yellow)[󱙝 ](red)[󰊠 ](purple)[󱙝 ](blue)$fill$time
+#$character
+#"""    
+right_format = "$time"
+
+[fill]
+symbol = " "
+style = "blue"
+disabled = false
+
+[character]
+success_symbol = "[󰁕](blue)"
+error_symbol = "[󰅚 ](red)"
+
+[directory]
+disabled = false
+read_only = " "
+#home_symbol = "ﰣ "
+home_symbol = "~"
+truncation_length = 2
+style = "cyan"
+format = "[$path ]($style)"
+
+[username]
+disabled = false
+style_user = " blue"
+style_root = "blue"
+show_always = true
+format = "[ $user]($style)"
+
+[hostname]
+ssh_only = false
+disabled = false
+format = "[$hostname ](blue)"
+
+[time]
+disabled = false
+style = "bold green"
+format = "[󱑍 $time ]($style)"
+use_12hr = true
+time_format = "%r"

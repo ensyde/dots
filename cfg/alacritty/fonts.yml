@@ -1,0 +1,20 @@
+font:
+  normal:
+    family: "JetBrainsMono Nerd Font"
+    style: auto 
+  bold:
+    family: "JetBrainsMono Nerd Font "
+    style: auto 
+  italic:
+    family: "JetBrainsMono Nerd Font"
+    style: auto
+  bold_italic:
+    family: "JetBrainsMono Nerd Font "
+    style: auto 
+  size: 10
+
+  offset:
+    x: -1
+    y: 0 
+  
+  use_thin_strokes: true

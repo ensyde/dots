@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+DIR="$HOME/.config/"
+
+rofi_command="rofi -theme $DIR/rofi/themes/asroot.rasi"
+
+# Apps
+terminal=" Alacritty"
+files=" Nemo"
+editor=" Code"
+clifm=" Ranger"
+lpad=" Doom Emacs"
+vim=" NeoVim"
+
+# Variable passed to rofi
+options="$terminal\n$files\n$editor\n$clifm\n$vim"
+
+# Functions
+
+chosen="$(echo -e "$options" | $rofi_command -p "Run apps as root" -dmenu -selected-row 0)"
+case $chosen in
+    $terminal)
+        apps_as_root 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/alacritty/alacritty.yml'
+        ;;
+    $files)
+       #  apps_as_root 'dbus-run-session nemo'
+        apps_as_root 'nemo'
+        ;;
+    $editor)
+        apps_as_root code
+        ;;
+    $clifm)
+        apps_as_root 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/alacritty/alacritty.yml -e ranger'
+        ;;
+    $lpad)
+        apps_as_root emacs
+        ;;
+    $vim)
+        apps_as_root 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/alacritty/alacritty.yml -e nvim'
+        ;;
+esac

@@ -1,0 +1,38 @@
+import:
+  - ~/.config/alacritty/fonts.yml
+    # - ~/.config/alacritty/tokyostorm.yml
+    #- ~/.config/alacritty/abyssmal.yml
+  - ~/.config/alacritty/tokyonight.yml
+
+env:
+  TERM: alacritty
+  WINIT_X11_SCALE_FACTOR: '1.0'
+
+window:
+  dimensions:
+    columns: 82
+    rows: 25
+  padding:
+    x: 8
+    y: 8
+
+  dpi:
+    x: 96
+    y: 96
+
+  decorations: full
+  startup_mode: windowed
+  dynamic_title: true
+
+history: 3000
+multiplier: 3
+cursor:
+  style:
+    shape: Beam
+    blinking: On
+  vi_mode_style:
+    shape: Block
+
+  unfocused_hollow: false
+
+live_config_reload: true
